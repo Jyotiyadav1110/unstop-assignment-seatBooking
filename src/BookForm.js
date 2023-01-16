@@ -12,7 +12,7 @@ const BookForm = () => {
 	const handleSubmit = () => {
 		
 		if (!seats) return setError("please enter number of seats");
-		if (seats <= 0) return setError("seat number can not be negative");
+		if (seats <= 0) return setError("seat number can not be negative or zero");
 		if (seats > 7) return setError("seat number can not be grater than 7");
 		
 		if (seats > availableSeats)
