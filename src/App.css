@@ -126,12 +126,13 @@ border: 1px solid rgba(255, 255, 255, 1);
   /* background-color: rgb(255, 255, 255); */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .Container{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 2px;
     align-items: center;
+    margin-bottom: 50px;
   }
   .hr{
     width: 500px;
