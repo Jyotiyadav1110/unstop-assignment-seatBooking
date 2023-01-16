@@ -48,7 +48,7 @@ const BookForm = () => {
 			</div>
 			<div className="hr"></div>
 			<div>
-			
+			<h1>Seats</h1>
 			<ShowList />
 			</div>
 			
