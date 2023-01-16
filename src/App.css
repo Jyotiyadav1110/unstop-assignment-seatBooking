@@ -130,7 +130,7 @@ border: 1px solid rgba(255, 255, 255, 1);
   .Container{
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 50px;
     align-items: center;
   }
   .hr{
