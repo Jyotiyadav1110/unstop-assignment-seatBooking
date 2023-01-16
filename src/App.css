@@ -125,3 +125,17 @@ backdrop-filter: blur(4.4px);
 border: 1px solid rgba(255, 255, 255, 1);
   /* background-color: rgb(255, 255, 255); */
 }
+
+@media screen and (max-width: 600px) {
+  .Container{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    align-items: center;
+  }
+  .hr{
+    width: 500px;
+    height: 2px;
+    background-color: white;
+  }
+}
