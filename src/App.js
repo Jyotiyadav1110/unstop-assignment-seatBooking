@@ -7,8 +7,7 @@ import { bookedSeats } from "./BookSeat";
 const App = () => {
 	console.log(bookedSeats);
 	const availableSeats = 80 - bookedSeats.size;
-	console.log(80 - bookedSeats);
-
+	// console.log(80 - bookedSeats);
 	const [seats, setSeats] = useState("");
 	const [error, setError] = useState("");
 	const handleSubmit = () => {

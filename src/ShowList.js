@@ -1,10 +1,10 @@
 import React from 'react'
-import { bookedSeats,seats as seatList } from './BookSeat'
+import { bookedSeats,seats } from './BookSeat'
 
 const ShowList = () => {
   return (
     <div className='showlist'>
-        {seatList.map((row,ind)=> {
+        {seats.map((row,ind)=> {
           return (
             <div className='row' key={'row'+ind}>
               {row.map((num,indCol) => (

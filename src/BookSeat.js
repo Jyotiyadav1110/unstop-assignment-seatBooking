@@ -14,22 +14,18 @@ export const seats = [  [1, 2, 3, 4, 5, 6, 7],
 
 export const bookedSeats = new Set();
 
-function bookSeats(numSeats) {
-  // check if there are enough available seats
- 
-  if (numSeats > 80 - bookedSeats.size) {
-    return "Sorry, there are not enough available seats.";
-  }
-
+function bookSeats(numSeats) { 
   // try to book seats in one row
   for (let i = 0; i < seats.length; i++) {
     const row = seats[i];
     const availableSeats = row.filter(seat => !bookedSeats.has(seat));
+
+    console.log(availableSeats);
     if (availableSeats.length >= numSeats) {
       for (let j = 0; j < numSeats; j++) {
         bookedSeats.add(availableSeats[j]);
       }
-      return `Booked seats: ${[...bookedSeats].join(', ')}`
+      return
     }
   }
 }
