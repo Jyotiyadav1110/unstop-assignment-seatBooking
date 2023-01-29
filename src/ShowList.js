@@ -1,5 +1,5 @@
 import React from 'react'
-import { bookedSeats,seats as seatList } from './util/BookSeat'
+import { bookedSeats,seats as seatList } from './BookSeat'
 
 const ShowList = () => {
   return (
