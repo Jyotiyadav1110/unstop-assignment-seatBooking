@@ -16,6 +16,7 @@ export const bookedSeats = new Set();
 
 function bookSeats(numSeats) {
   // check if there are enough available seats
+ 
   if (numSeats > 80 - bookedSeats.size) {
     return "Sorry, there are not enough available seats.";
   }
@@ -29,21 +30,6 @@ function bookSeats(numSeats) {
         bookedSeats.add(availableSeats[j]);
       }
       return `Booked seats: ${[...bookedSeats].join(', ')}`
-    }
-  }
-
-  // if seats are not available in one row, book nearby seats
-  let booked = [];
-  for (let i = 0; i < seats.length; i++) {
-    const row = seats[i];
-    for (let j = 0; j < row.length; j++) {
-      if (!bookedSeats.has(row[j])) {
-        bookedSeats.add(row[j]);
-        booked.push(row[j]);
-        if (booked.length === numSeats) {
-          return `Booked seats: ${booked.join(', ')}`;
-        }
-      }
     }
   }
 }

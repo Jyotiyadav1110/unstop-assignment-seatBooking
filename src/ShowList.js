@@ -1,7 +1,7 @@
 import React from 'react'
 import { bookedSeats,seats as seatList } from './util/BookSeat'
 
-const ShowList = ({setShowList}) => {
+const ShowList = () => {
   return (
     <div className='showlist'>
         {seatList.map((row,ind)=> {

@@ -6,11 +6,13 @@ import { bookedSeats } from "./util/BookSeat";
 
 
 const BookForm = () => {
+	console.log(bookedSeats);
 	const availableSeats = 80 - bookedSeats.size;
+	console.log(80 - bookedSeats);
+
 	const [seats, setSeats] = useState("");
 	const [error, setError] = useState("");
 	const handleSubmit = () => {
-		
 		if (!seats) return setError("please enter number of seats");
 		if (seats <= 0) return setError("seat number can not be negative or zero");
 		if (seats > 7) return setError("seat number can not be grater than 7");
@@ -18,9 +20,6 @@ const BookForm = () => {
 		if (seats > availableSeats)
 			return setError("value exceeds availbale seats");
 		bookSeats(Number(seats));
-		// let x = bookSeats(Number(seats));
-		// console.log(x);
-		// console.log(bookedSeats)
 		setError("");
 		setSeats("");
 	};
@@ -37,7 +36,7 @@ const BookForm = () => {
 				/>
 				<small style={{color:'red', fontStyle:'italic'}}>{error}</small>
 				<p>Available Seats : {availableSeats}</p>
-				<button onClick={handleSubmit}>Book Ticket &nbsp;&rarr;</button>
+				<button onClick={handleSubmit}>Book Ticket</button>
 				<div className="indentify">
 				<div className="available"></div>
 				<p>Available Seats</p>
